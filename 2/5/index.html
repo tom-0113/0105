@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧腦波英文學習</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let counter = 0;
+        function checkAnswer(answer, btn) {
+            counter++;
+            const result = document.getElementById('result');
+            const show = document.getElementById('show_res');
+            result.textContent = result.textContent + answer;
+            const btn_id = btn.id;
+            const btn_obj = document.getElementById(btn_id);
+            btn_obj.style.display = "none";
+
+            const final_ans = "I need colour pencil to do homework"
+
+            // console.log(result.textContent)
+            if (counter == 6) {
+                if (result.textContent.includes(final_ans)) {
+                    show.textContent = "回答正確!"
+                    show.style.color = 'green';
+                } else {
+                    show.textContent = '錯誤，請再試一次！';
+                    show.style.color = 'red';
+                }
+            }
+
+        }
+
+        function Reset() {
+            counter = 0
+            location.reload();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="A">
+        <a href="/index.html"><button onclick=""><img src="img/首頁1.png" alt=""></button></a>
+        <p>☆☆☆高級</p>
+        <!-- <button onclick="window.location.replace('../3-2')"><img src="img/考卷.png" alt=""></button> -->
+
+
+
+    </div>
+    <div class="game-container" style="width: 80%; height: 80%;">
+
+        <div class="question">
+            Q : 我需要色鉛筆來做功課。
+        </div>
+        <div class="options">
+            <button id="do" onclick="checkAnswer(' do',this)">do</button>
+            <button id="homework" onclick="checkAnswer(' homework',this)">homework</button>
+            <button id="need" onclick="checkAnswer('I need',this)">I need</button>
+            <button id="pencil" onclick="checkAnswer(' pencil',this)">pencil</button>
+            <button id="colour" onclick="checkAnswer(' colour',this)">colour</button>
+            <button id="to" onclick="checkAnswer(' to',this)">to</button>
+        </div>
+
+        <div id="result" style="margin-top: 20px; font-size: 30px;">
+
+        </div>
+
+        <div style="font-size: 30px; margin-bottom: 2%;">
+            _________________________________________
+        </div>
+
+        <div id="show_res" style="margin-top: 20px; font-size: 30px;">
+
+        </div>
+
+        <div class="change_page">
+
+            <button onclick="Reset()">重試</button>
+
+
+            <a class="next" href="./5-1/">
+                <div class="o">
+                    <p>下一頁-考試</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
