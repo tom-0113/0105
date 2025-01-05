@@ -1,0 +1,149 @@
+.A {
+    display: flex;
+    width: 100;
+    position: sticky;
+    z-index: 1000;
+    background-color: white;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+.A a{
+    width: 70px;
+    height: 70px;
+}
+
+.A p {
+    padding: 10px 30px;
+    font-size: 200%;
+    text-align: left;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    width: auto;
+    float: right;
+}
+
+* {
+    margin: 0;
+    width: 100%;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+}
+
+button:hover {
+    background-color: rgb(255, 188, 19);
+}
+
+button img {
+    width: 60px;
+    height: 60px;
+}
+
+li {
+    list-style: none;
+}
+
+.a {
+    width: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0px;
+}
+
+.game-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.question {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.options button {
+    width: 50%;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    /* border: none; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: rgb(0, 185, 222);
+}
+
+a {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    border: 1px solid black;
+}
+
+.o p {
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.o:hover {
+    background-color: rgb(255, 188, 19);
+}
+
+.change_page {
+    /* width: 60%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img{
+    width: 50%;
+    height: 100%;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧腦波英文學習</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if (answer) {
+                result.textContent = '正確！';
+                result.style.color = 'green';
+            } else {
+                result.textContent = '錯誤，請再試一次！';
+                result.style.color = 'red';
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="A">
+        <a href="/index.html"><button onclick=""><img src="img/首頁1.png" alt=""></button></a>
+        <p>☆☆中級</p>
+        <!-- <button onclick="window.location.replace('../3-2')"><img src="img/考卷.png" alt=""></button> -->
+
+
+
+    </div>
+    <div class="game-container" style="width: 80%; height: 80%;">
+
+        <div class="question">
+            Q : I stand _____ my parents.
+        </div>
+        <div class="inline">
+            <div>
+                <img src="./img/parents.jpg">
+            </div>
+            <div class="options">
+                <button onclick="checkAnswer(true)">between of</button>
+                <button onclick="checkAnswer(false)">in the front of</button>
+                <button onclick="checkAnswer(false)">in the side of</button>
+            </div>
+        </div>
+
+        <div id="result" style="margin-top: 20px; font-size: 30px; margin-bottom: 2%;"></div>
+
+        <div class="change_page">
+            <a class="next" href="./4-1/">
+                <div class="o">
+                    <p>下一頁-考試</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
