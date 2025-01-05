@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧腦波英文學習</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let counter = 0;
+        function checkAnswer(answer, btn) {
+            counter++;
+            const result = document.getElementById('result');
+            const show = document.getElementById('show_res');
+            result.textContent = result.textContent + answer;
+            const btn_id = btn.id;
+            const btn_obj = document.getElementById(btn_id);
+            btn_obj.style.display = "none";
+
+            const final_ans = "There are five monkey on the tree"
+
+            // console.log(result.textContent)
+            if (counter == 7) {
+                if (result.textContent.includes(final_ans)) {
+                    show.textContent = "回答正確!"
+                    show.style.color = 'green';
+                } else {
+                    show.textContent = '錯誤，請再試一次！';
+                    show.style.color = 'red';
+                }
+            }
+
+        }
+
+        function Reset() {
+            counter = 0;
+            location.reload();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="A">
+        <a href="/index.html"><button onclick=""><img src="img/首頁1.png" alt=""></button></a>
+        <p>☆☆☆高級考試<img class="img_test" src="img/考卷.png"></p>
+        <!-- <button onclick="window.location.replace('../3-2')"><img src="img/考卷.png" alt=""></button> -->
+
+
+
+    </div>
+    <div class="game-container" style="width: 80%; height: 80%;">
+
+        <div class="question">
+            Q : 樹上有五隻猴子
+        </div>
+        <div class="options">
+            <button id="on" onclick="checkAnswer(' on',this)">on</button>
+            <button id="tree" onclick="checkAnswer(' tree',this)">tree</button>
+            <button id="monkey" onclick="checkAnswer(' monkey',this)">monkey</button>
+            <button id="are" onclick="checkAnswer(' are',this)">are</button>
+            <button id="There" onclick="checkAnswer('There',this)">There</button>
+            <button id="five" onclick="checkAnswer(' five',this)">five</button>
+            <button id="the" onclick="checkAnswer(' the',this)">the</button>
+        </div>
+
+        <div id="result" style="margin-top: 20px; font-size: 30px;">
+
+        </div>
+
+        <div style="font-size: 30px; margin-bottom: 2%;">
+            _________________________________________
+        </div>
+
+        <div id="show_res" style="margin-top: 20px; font-size: 30px;">
+
+        </div>
+
+        <div class="change_page">
+            <a class="next" href="../">
+                <div class="o">
+                    <p>上一頁</p>
+                </div>
+            </a>
+
+            <button onclick="Reset()">重試</button>
+
+
+            <!-- <a class="next" href="./4-1/">
+                <div class="o">
+                    <p>下一頁-考試</p>
+                </div>
+            </a> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
